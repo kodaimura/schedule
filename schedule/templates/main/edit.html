@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+  #id_year, #id_time {
+    width: 50px;
+    height: 10px;
+  }
+  #id_month, #id_day {
+    width: 25px;
+    height: 10px;
+  }
+  
+  #id_do {
+    width: 200px;
+    height: 20px;
+  }
+</style>
+<title>スケジュール</title>
+</head>
+<body>
+<h1>編集</h1>
+
+<br>
+<form method="POST">
+<button type="submit" name="remove"><big>削除</big></button><br><br>
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit" name="change"><big>変更</big></button><br>
+</form>
+<br>
+<button type="submit"><a href="../"><big>戻る</big></a></button>
+</body>
+</html>

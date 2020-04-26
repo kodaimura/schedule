@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スケジュール</title>
+</head>
+<body>
+<h1>スケジュール</h1>
+<button type="submit"><a href="new"><big>予定追加</big></a></button><br>
+<br>
+<hr>
+<form action="{% url 'main:edit' %}" method="get">{% csrf_token %}
+{% for d in data %}
+  {{ d.year }} /
+  {{ d.month }} /
+  {{ d.day }} /
+  {{ d.time }}
+  <p>予定: {{ d.task }}</p>
+  <p>{{ d.details }}</p>
+  
+
+  <button type="submit" name={{ d.S_id }}><big>編集</big></button><br>  
+  
+  <hr>
+{% endfor %}
+</form>
+</body>
+</html>
