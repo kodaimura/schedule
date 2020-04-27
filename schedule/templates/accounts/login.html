@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>スケジュール</title>
+<style type="text/css">
+  #id_username, #id_password {
+    width: 150px;
+    height: 30px;
+  }
+  button {
+    width: 100px;
+    height: 30px;
+  }
+</style>
+</head>
+<body>
+  <h1>スケジュール管理アプリ</h1>
+  
+  <h2>ログイン</h2>
+
+  <form action="" method="POST"> 
+    {% csrf_token %}
+    {% for field in form %}
+      {{ field }} 
+    {% endfor %}
+
+    {% for error in form.non_field_errors %}    
+      <p>{{ error }}</p>
+    {% endfor %}
+
+    <button type="submit"><big><big>ログイン</big></big></button>
+  </form>
+  <br>
+  <h2>アカウント登録</h2>
+  <p>アカウントをお持ちでない方は<a href="signup">こちら</a>からアカウント登録をしてください。</p>
+
+
+</body>
+</html>

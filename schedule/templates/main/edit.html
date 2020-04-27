@@ -25,12 +25,12 @@
 
 <br>
 <form method="POST">
-<button type="submit" name="remove"><big>削除</big></button><br><br>
+<button type="submit" name="remove"><big><big>削除</big></big></button><br><br>
 {% csrf_token %}
 {{ form.as_p }}
-<button type="submit" name="change"><big>変更</big></button><br>
+<button type="submit" name="change"><big><big>変更</big></big></button><br>
 </form>
 <br>
-<button type="submit"><a href="../"><big>戻る</big></a></button>
+<a href="schedule"><big>戻る</big></a>
 </body>
 </html>

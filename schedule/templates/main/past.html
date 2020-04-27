@@ -23,18 +23,13 @@
   color: gray;
 }
 </style>
-<title>スケジュール</title>
+<title>過去スケジュール</title>
 </head>
 <body>
-<button type="submit"><a href="../"><big>ログアウト</big></a></button>
-<h1>スケジュール</h1>
-
-<a href="past"><big>過去</big></a><br><br>
-
-<button type="submit"><a href="new"><big><big>予定追加</big></big></a></button><br>
+<h1>過去スケジュール</h1>
 
 <br>
-<h3>{{ today }}</h3>
+<a href="schedule"><big>戻る</big></a>
 <hr>
 <form action="{% url 'main:edit' %}" method="get">{% csrf_token %}
 {% for d in data %}
